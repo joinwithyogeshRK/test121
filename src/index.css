@@ -1,0 +1,136 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply font-sans text-neutral-800 bg-background antialiased;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Component Styles */
+.product-card {
+  @apply bg-white rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-neutral-200;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 active:bg-primary-700 transition-colors duration-200 border-0 cursor-pointer;
+}
+
+.btn-success {
+  @apply bg-success text-white px-6 py-3 rounded-lg font-medium hover:bg-success-600 active:bg-success-700 transition-colors duration-200 border-0 cursor-pointer;
+}
+
+.btn-secondary {
+  @apply bg-neutral-100 text-neutral-700 px-6 py-3 rounded-lg font-medium hover:bg-neutral-200 active:bg-neutral-300 transition-colors duration-200 border border-neutral-300 cursor-pointer;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+}
+
+.search-bar {
+  @apply w-full px-4 py-3 pl-12 border border-neutral-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+}
+
+.sidebar-nav {
+  @apply bg-white border-r border-neutral-200 h-full overflow-y-auto;
+}
+
+.nav-link {
+  @apply block px-4 py-3 text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors duration-200 border-0 no-underline;
+}
+
+.nav-link.active {
+  @apply bg-primary-50 text-primary-700 border-r-2 border-primary-500;
+}
+
+.hero-section {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16 px-6;
+}
+
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+.category-filter {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border transition-colors duration-200 cursor-pointer;
+}
+
+.category-filter.active {
+  @apply bg-primary-500 text-white border-primary-500;
+}
+
+.category-filter:not(.active) {
+  @apply bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-50;
+}
+
+.price-tag {
+  @apply text-lg font-semibold text-neutral-900;
+}
+
+.original-price {
+  @apply text-sm text-neutral-500 line-through;
+}
+
+.discount-badge {
+  @apply absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.rating-stars {
+  @apply flex items-center space-x-1 text-yellow-400;
+}
+
+.cart-badge {
+  @apply absolute -top-2 -right-2 bg-success text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-medium;
+}
+
+.breadcrumb {
+  @apply flex items-center space-x-2 text-sm text-neutral-600;
+}
+
+.breadcrumb-separator {
+  @apply text-neutral-400;
+}
+
+/* Layout Utilities */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-12 px-6;
+}
+
+/* Focus States */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  @apply outline-none;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
